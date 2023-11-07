@@ -16,12 +16,12 @@ question: {question}
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api/hector', methods=['GET'])
+@app.route('/api/hector', methods=['POST'])
 def run_python_code():
-  # data = request.get_json()
-  # tone = data.get('tone', 'surfer stoner')
-  # question = data.get('question', '')
-  answer = initialise_llm('angry', 'what is the capital of tokyo')
+  data = request.get_json()
+  tone = data.get('tone', 'surfer stoner')
+  question = data.get('question', '')
+  answer = initialise_llm(tone, question)
   return jsonify(answer=answer)
 
 def initialise_llm(tone:str, question:str)->str:
@@ -34,4 +34,4 @@ def initialise_llm(tone:str, question:str)->str:
   return answer
 
 if __name__ == '__main__':
-    app.run(port=3000)
+    app.run(port=8080)
