@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import axios from 'axios';
+
 import './App.css';
 
 
@@ -8,9 +8,19 @@ function App() {
   const [answer, setAnswer] = useState('');
 
   const handleSubmit = () => {
-    axios.post('http://localhost:3000/run_python_code', { question })
-      .then(response => {
-        setAnswer(response.data.answer);
+    fetch('http://localhost:3000/api/hector', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        question: question,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        setAnswer(data.answer);
       });
   };
 
@@ -18,7 +28,7 @@ function App() {
     <div className="App">
       <input type="text" value={question} onChange={e => setQuestion(e.target.value)} />
       <button onClick={handleSubmit}>Submit</button>
-      <p>{answer}</p>
+      <p>{{ answer }} </p>
     </div>
   );
 }
