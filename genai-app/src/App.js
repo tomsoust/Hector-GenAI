@@ -12,7 +12,7 @@ function App() {
   },
   body: JSON.stringify({
     tone: 'hippie',
-    question: 'what city is the capital of france?',
+    question: question,
   }),
 })
   .then(response => response.json())

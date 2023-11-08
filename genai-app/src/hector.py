@@ -9,7 +9,7 @@ from langchain.chains import LLMChain
 
 # Set the OpenAI API key
 load_dotenv()
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 template = """Answer the following question in the tone of {tone} including emojis
 

@@ -1,12 +1,15 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
-
+from dotenv import load_dotenv
 import openai
-
+import os
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-openai.api_key = "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"
+
+load_dotenv()
+
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 template = """Answer the following question in the tone of {tone} including emojis
 
