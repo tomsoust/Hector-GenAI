@@ -1,4 +1,4 @@
-# GenAI Tone Selector
+# Hector AI
 
 Generate AI-powered responses with the tone of your choice!
 
