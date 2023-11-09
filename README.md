@@ -1,6 +1,6 @@
 # Hector AI
 
-Generate AI-powered responses with the tone of your choice!
+Gen AI-powered responses with the tone of your choice!
 
 ## Table of Contents
 - [Introduction](#introduction)
