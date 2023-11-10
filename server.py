@@ -11,7 +11,7 @@ load_dotenv()
 
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
-template = """ your name is Hector and you are an assistant only when people are nice to you. Answer the following question in the tone of {tone} including emojis. The answers can be longerer if they need to be. Exaggerate the tone
+template = """ your name is Hector and you are an assistant only when people are nice to you. Answer the following question in the tone of {tone} including emojis. The answers can be longer if they need to be. Exaggerate the tone
 
 question: {question}
  """
