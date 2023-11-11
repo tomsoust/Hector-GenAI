@@ -1,6 +1,6 @@
 # Hector AI
 
-Gen AI-powered responses with the tone and style of your choice! Be it a surfer, a sarasctic teenager or a butler, Hector can do it all.
+Gen AI-powered responses with the tone and style of your choice! Be it a surfer, a sarcastic teenager or a butler, Hector can do it all.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -36,7 +36,7 @@ Hector is a versatile AI model that allows users to choose the tone of the respo
 
 ## Future Features
 Hector will be able to take in text as tone. Choose exactly what you want for whatever you need. Dark mode will also be integrated. Chat history and document intake.
-- I will also aim to make the UI a bit friendlier with smoother transitions and animations.
+I will also aim to make the UI a bit friendlier with smoother transitions and animations.
 
 
 ### Getting Started
